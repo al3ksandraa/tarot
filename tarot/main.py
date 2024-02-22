@@ -4,6 +4,10 @@ from PyQt5 import uic
 from PyQt5.QtGui import QPixmap, QIcon
 from PyQt5.QtWidgets import QApplication, QMainWindow, QMessageBox
 import random
+import pyautogui
+
+
+WIDTH, HEIGHT = int(pyautogui.size().width), int(pyautogui.size().height)
 
 
 class MeaningsWindow(QMainWindow):  # значение карт
@@ -176,19 +180,17 @@ class LayoutsWindow(QMainWindow):  # схемы некоторых раскла�
         self.db = sqlite3.connect("db/meanings.db")  # подключение БД
         self.cur = self.db.cursor()
 
-        images = [self.image1, self.image2, self.image3, self.image4, self.image5, self.image6,
-                  self.image7, self.image8, self.image9]
-        texts = [self.text1, self.text2, self.text3, self.text4, self.text5, self.text6,
-                 self.text7, self.text8, self.text9]
+        self.choice.currentIndexChanged.connect(lambda: self.set_data(self.choice.currentIndex() + 1))
 
-        for i in range(1, 10):
-            # отображение схемы расклада
-            images[i - 1].setPixmap(QPixmap(f'pictures/layouts/{i}.png'))
+        # по умолчанию
+        self.set_data(1)
+        self.choice.setCurrentIndex(0)
 
-            # отображение описания расклада
-            data = self.cur.execute(f"""SELECT data FROM layouts
-                WHERE key = {i}""").fetchone()
-            texts[i - 1].setPlainText(*data)
+    def set_data(self, key):
+        self.image.setPixmap(QPixmap(f'pictures/layouts/{key}.png'))
+        data = self.cur.execute(f'''SELECT data FROM layouts
+                  WHERE key = {key}''').fetchone()
+        self.text.setPlainText(*data)
 
 
 class InfoWindow(QMainWindow):  # справочная информация
