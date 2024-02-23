@@ -3,6 +3,7 @@ import sqlite3
 from PyQt5 import uic
 from PyQt5.QtGui import QPixmap, QIcon
 from PyQt5.QtWidgets import QApplication, QMainWindow, QMessageBox
+from PyQt5 import QtCore
 import random
 import pyautogui
 
@@ -203,14 +204,25 @@ class InfoWindow(QMainWindow):  # справочная информация
         self.db = sqlite3.connect("db/meanings.db")  # подключение БД
         self.cur = self.db.cursor()
 
-        texts = [self.data1, self.data2, self.data3, self.data4,
-                 self.data5, self.data6, self.data7]
+        self.choice.currentIndexChanged.connect(lambda: self.set_data(self.choice.currentIndex() + 1))
 
-        # отображение информации из БД
-        for i in range(1, 8):
-            data = self.cur.execute(f"""SELECT data FROM info
-                WHERE key = {i}""").fetchone()
-            texts[i - 1].setHtml(*data)
+        # по умолчанию
+        self.set_data(1)
+        self.choice.setCurrentIndex(0)
+
+    def set_data(self, key):
+        data = self.cur.execute(f'''SELECT data FROM info
+                          WHERE key = {key}''').fetchone()
+        self.text.setHtml(*data)
+
+        # texts = [self.data1, self.data2, self.data3, self.data4,
+        #          self.data5, self.data6, self.data7]
+        #
+        # # отображение информации из БД
+        # for i in range(1, 8):
+        #     data = self.cur.execute(f"""SELECT data FROM info
+        #         WHERE key = {i}""").fetchone()
+        #     texts[i - 1].setHtml(*data)
 
 
 class MainWindow(QMainWindow):  # основное окно
@@ -219,6 +231,8 @@ class MainWindow(QMainWindow):  # основное окно
         uic.loadUi('ui/main.ui', self)
         self.setWindowTitle('Справочник по картам Таро')
         self.setWindowIcon(QIcon('pictures/icons/tarot.ico'))  # иконка окна
+
+        # self.setWindowFlags(QtCore.Qt.WindowType.MSWindowsFixedSizeDialogHint)
 
         self.window_meanings = MeaningsWindow()  # окно значений карт
         self.window_day_card = DayCardWindow()  # окно "карта дня"
