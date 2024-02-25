@@ -7,38 +7,47 @@
     <x>0</x>
     <y>0</y>
     <width>612</width>
-    <height>693</height>
+    <height>671</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
     <width>612</width>
-    <height>693</height>
+    <height>671</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
     <width>612</width>
-    <height>693</height>
+    <height>671</height>
    </size>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="btn_meaning">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>20</x>
       <y>460</y>
-      <width>591</width>
+      <width>571</width>
       <height>41</height>
      </rect>
     </property>
     <property name="font">
      <font>
+      <family>Century Gothic</family>
       <pointsize>14</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(68, 102, 106);
+color: rgb(239, 239, 239);
+border-radius: 8px</string>
     </property>
     <property name="text">
      <string>Значения карт</string>
@@ -47,16 +56,22 @@
    <widget class="QPushButton" name="btn_layouts">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>20</x>
       <y>560</y>
-      <width>591</width>
+      <width>571</width>
       <height>41</height>
      </rect>
     </property>
     <property name="font">
      <font>
+      <family>Century Gothic</family>
       <pointsize>14</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(68, 102, 106);
+color: rgb(239, 239, 239);
+border-radius: 8px</string>
     </property>
     <property name="text">
      <string>Расклады</string>
@@ -65,16 +80,22 @@
    <widget class="QPushButton" name="btn_info">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>20</x>
       <y>610</y>
-      <width>591</width>
+      <width>571</width>
       <height>41</height>
      </rect>
     </property>
     <property name="font">
      <font>
+      <family>Century Gothic</family>
       <pointsize>14</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(68, 102, 106);
+color: rgb(239, 239, 239);
+border-radius: 8px</string>
     </property>
     <property name="text">
      <string>О Таро</string>
@@ -83,11 +104,14 @@
    <widget class="QLabel" name="image">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>20</x>
       <y>50</y>
-      <width>591</width>
+      <width>571</width>
       <height>391</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
     </property>
     <property name="text">
      <string/>
@@ -96,22 +120,26 @@
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>170</x>
+      <x>150</x>
       <y>10</y>
-      <width>281</width>
+      <width>311</width>
       <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
+      <family>Century Gothic</family>
       <pointsize>16</pointsize>
-      <weight>50</weight>
+      <weight>75</weight>
       <italic>false</italic>
-      <bold>false</bold>
-      <underline>true</underline>
+      <bold>true</bold>
+      <underline>false</underline>
       <stylestrategy>PreferDefault</stylestrategy>
       <kerning>true</kerning>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(50, 75, 78);</string>
     </property>
     <property name="text">
      <string>Справочник по картам Таро</string>
@@ -120,33 +148,28 @@
    <widget class="QPushButton" name="btn_day_card">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>20</x>
       <y>510</y>
-      <width>591</width>
+      <width>571</width>
       <height>41</height>
      </rect>
     </property>
     <property name="font">
      <font>
+      <family>Century Gothic</family>
       <pointsize>14</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(68, 102, 106);
+color: rgb(239, 239, 239);
+border-radius: 8px</string>
     </property>
     <property name="text">
      <string>Карта дня</string>
     </property>
    </widget>
   </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>612</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>

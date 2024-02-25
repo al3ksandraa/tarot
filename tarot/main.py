@@ -3,7 +3,6 @@ import sqlite3
 from PyQt5 import uic
 from PyQt5.QtGui import QPixmap, QIcon
 from PyQt5.QtWidgets import QApplication, QMainWindow, QMessageBox
-from PyQt5 import QtCore
 import random
 import pyautogui
 
@@ -86,7 +85,7 @@ class NotesWindow(QMainWindow):  # заметки к карте
         self.db = sqlite3.connect("db/meanings.db")  # подключение БД
         self.cur = self.db.cursor()
 
-        self.btn_save.clicked.connect(self.save)  # кнопка соханения
+        self.btn_save.clicked.connect(self.save)  # кнопка сохранения
 
         self.key = None  # номер карты
         self.table = ''  # таблица/группа карты
@@ -107,25 +106,6 @@ class NotesWindow(QMainWindow):  # заметки к карте
             WHERE key = {key}""").fetchone()
 
         self.text.setPlainText(str(*notes))  # отображение заметок
-
-    def closeEvent(self, event):
-        # диалоговое окно при закрытии заметок
-        dialog = QMessageBox(self)
-        dialog.setWindowTitle(' ')
-        dialog.setText('Закрыть окно заметок?')
-
-        yes = dialog.addButton(QMessageBox.Yes)  # кнопка "Да"
-        cancel = dialog.addButton(QMessageBox.No)  # кнопка "Нет"
-        yes.setText("Да")
-        cancel.setText("Отмена")
-
-        dialog.setDefaultButton(cancel)
-        dialog.exec()
-
-        if dialog.clickedButton() == yes:  # если нажата кнопка "Да", закрытие окна
-            event.accept()
-        else:
-            event.ignore()
 
 
 class DayCardWindow(QMainWindow):  # карта дня
@@ -214,15 +194,6 @@ class InfoWindow(QMainWindow):  # справочная информация
         data = self.cur.execute(f'''SELECT data FROM info
                           WHERE key = {key}''').fetchone()
         self.text.setHtml(*data)
-
-        # texts = [self.data1, self.data2, self.data3, self.data4,
-        #          self.data5, self.data6, self.data7]
-        #
-        # # отображение информации из БД
-        # for i in range(1, 8):
-        #     data = self.cur.execute(f"""SELECT data FROM info
-        #         WHERE key = {i}""").fetchone()
-        #     texts[i - 1].setHtml(*data)
 
 
 class MainWindow(QMainWindow):  # основное окно

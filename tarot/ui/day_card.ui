@@ -7,19 +7,19 @@
     <x>0</x>
     <y>0</y>
     <width>613</width>
-    <height>462</height>
+    <height>433</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
     <width>613</width>
-    <height>462</height>
+    <height>433</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
     <width>613</width>
-    <height>462</height>
+    <height>433</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -37,8 +37,12 @@
     </property>
     <property name="font">
      <font>
+      <family>Century Gothic</family>
       <pointsize>14</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(50, 75, 78);</string>
     </property>
     <property name="text">
      <string>Карта дня</string>
@@ -55,6 +59,11 @@
       <width>181</width>
       <height>301</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Century Gothic</family>
+     </font>
     </property>
     <property name="lineWidth">
      <number>2</number>
@@ -74,8 +83,14 @@
     </property>
     <property name="font">
      <font>
+      <family>Century Gothic</family>
       <pointsize>10</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(68, 102, 106);
+color: rgb(239, 239, 239);
+border-radius: 8px</string>
     </property>
     <property name="text">
      <string>Новая карта</string>
@@ -92,8 +107,14 @@
     </property>
     <property name="font">
      <font>
+      <family>Century Gothic</family>
       <pointsize>10</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(68, 102, 106);
+color: rgb(239, 239, 239);
+border-radius: 8px</string>
     </property>
     <property name="text">
      <string>Полное описание карты</string>
@@ -110,8 +131,12 @@
     </property>
     <property name="font">
      <font>
+      <family>Century Gothic</family>
       <pointsize>12</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(50, 75, 78);</string>
     </property>
     <property name="text">
      <string/>
@@ -128,25 +153,19 @@
     </property>
     <property name="font">
      <font>
+      <family>Century Gothic</family>
       <pointsize>10</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 4px ridge rgb(68, 102, 106);
+color: rgb(50, 75, 78);</string>
     </property>
     <property name="readOnly">
      <bool>true</bool>
     </property>
    </widget>
   </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>613</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>
