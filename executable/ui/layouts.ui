@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>810</width>
+    <height>341</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>810</width>
+    <height>341</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>810</width>
+    <height>341</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>111</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Century Gothic</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(50, 75, 78);</string>
+    </property>
+    <property name="text">
+     <string>Расклады</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="choice">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>50</y>
+      <width>281</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Century Gothic</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(68, 102, 106);
+color: rgb(239, 239, 239);
+border-radius: 0px</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>Кельтский крест</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Да или Нет</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Звезда</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Пирамида</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>В поисках любви</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Волшебная любовь</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Расклад на карьеру</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Желанная цель</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="image">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>90</y>
+      <width>281</width>
+      <height>231</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Century Gothic</family>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 1px solid rgb(68, 102, 106)</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="text">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>50</y>
+      <width>471</width>
+      <height>271</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Century Gothic</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 4px ridge rgb(68, 102, 106);
+color: rgb(50, 75, 78);</string>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

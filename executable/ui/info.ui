@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>810</width>
+    <height>551</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>810</width>
+    <height>551</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>810</width>
+    <height>551</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>101</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Century Gothic</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(50, 75, 78);</string>
+    </property>
+    <property name="text">
+     <string>О Таро</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="choice">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>50</y>
+      <width>351</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Century Gothic</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(68, 102, 106);
+color: rgb(239, 239, 239);
+border-radius: 0px</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>Происхождение карт</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Символический язык арканов</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Стихии и масти</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Расклады</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Чтение расклада</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Формулы для чтения карт</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Обобщение расклада</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QTextEdit" name="text">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>90</y>
+      <width>771</width>
+      <height>441</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>771</width>
+      <height>441</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>771</width>
+      <height>441</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Century Gothic</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 4px ridge rgb(68, 102, 106);
+color: rgb(50, 75, 78);</string>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

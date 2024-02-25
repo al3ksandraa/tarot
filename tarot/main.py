@@ -2,12 +2,8 @@ import sys
 import sqlite3
 from PyQt5 import uic
 from PyQt5.QtGui import QPixmap, QIcon
-from PyQt5.QtWidgets import QApplication, QMainWindow, QMessageBox
+from PyQt5.QtWidgets import QApplication, QMainWindow
 import random
-import pyautogui
-
-
-WIDTH, HEIGHT = int(pyautogui.size().width), int(pyautogui.size().height)
 
 
 class MeaningsWindow(QMainWindow):  # значение карт

@@ -771,7 +771,7 @@ color: rgb(50, 75, 78);</string>
      <enum>QTabWidget::Triangular</enum>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -783,7 +783,7 @@ color: rgb(50, 75, 78);</string>
         <x>0</x>
         <y>0</y>
         <width>769</width>
-        <height>289</height>
+        <height>290</height>
        </rect>
       </property>
       <property name="font">
@@ -811,7 +811,7 @@ color: rgb(50, 75, 78);</string>
         <x>0</x>
         <y>0</y>
         <width>769</width>
-        <height>289</height>
+        <height>290</height>
        </rect>
       </property>
       <property name="font">
