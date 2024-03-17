@@ -67,6 +67,17 @@ class MeaningsWindow(QMainWindow):  # значение карт
             if table != 'pentacles':
                 self.pentacles.setCurrentIndex(0)
 
+            if table == 'senior_arcana':
+                self.senior.setCurrentIndex(key + 1)
+            elif table == 'wands':
+                self.wands.setCurrentIndex(key)
+            elif table == 'cups':
+                self.cups.setCurrentIndex(key)
+            elif table == 'swords':
+                self.swords.setCurrentIndex(key)
+            elif table == 'pentacles':
+                self.pentacles.setCurrentIndex(key)
+
     def show_window(self, window):
         window.show()
 
